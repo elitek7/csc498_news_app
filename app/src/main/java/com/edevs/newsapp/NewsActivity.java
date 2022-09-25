@@ -1,7 +1,9 @@
 package com.edevs.newsapp;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -12,6 +14,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class NewsActivity extends AppCompatActivity
 {
@@ -44,5 +48,14 @@ public class NewsActivity extends AppCompatActivity
     parallelButton = findViewById(R.id.panel_parallel);
     softwareButton = findViewById(R.id.panel_software);
     discreteButton = findViewById(R.id.panel_discrete);*/
+
 }
+
+    public void post(View v)
+    {
+        Toast.makeText(this, "Post mode", Toast.LENGTH_SHORT).show();
+        //Initializing an intent to access the post page
+        Intent i = new Intent(getApplicationContext(), PostActivity.class);
+        startActivity(i);
+    }
 }
