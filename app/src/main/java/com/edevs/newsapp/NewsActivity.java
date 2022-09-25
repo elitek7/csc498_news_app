@@ -17,7 +17,8 @@ public class NewsActivity extends AppCompatActivity
 {
     private SQLiteDatabase db;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
     // Lines 17 to 19 hide the title and action bar
     requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -25,7 +26,8 @@ public class NewsActivity extends AppCompatActivity
     getSupportActionBar().hide();
     setContentView(R.layout.activity_main);
 
-        try {
+        try
+        {
     db = this.openOrCreateDatabase("newsdb", MODE_PRIVATE, null);
     db.execSQL("CREATE Table IF NOT EXISTS exam (name VARCHAR, url VARCHAR)");
     // To be ran once
@@ -33,8 +35,8 @@ public class NewsActivity extends AppCompatActivity
     db.execSQL("INSERT INTO new (name, url) VALUES ('World', 'https://edition.cnn.com/world')");
     db.execSQL("INSERT INTO new (name, url) VALUES ('Lebanese Politics', 'https://www.aljazeera.com/where/lebanon/')");
     db.execSQL("INSERT INTO new (name, url) VALUES ('Tech', 'https://www.bbc.com/news/technology')");
-
-} catch (Exception e)
+        }
+        catch (Exception e)
     {
         e.printStackTrace(); //pinpoints the exact line in which the method raised the exception
     }
