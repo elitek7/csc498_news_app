@@ -38,13 +38,17 @@ public class NewsActivity extends AppCompatActivity
 
         try
         {
-            db = this.openOrCreateDatabase("newdb", MODE_PRIVATE, null);
+            db = this.openOrCreateDatabase("newwwwdb", MODE_PRIVATE, null);
             db.execSQL("CREATE Table IF NOT EXISTS new (name VARCHAR, description TEXT, author VARCHAR, published_at VARCHAR, location VARCHAR)");
             // To be ran once
-            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('Top News', 'hello top', 'author1', 'published1', 'loc1')");
-            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('World News', 'hello world', 'author2', 'published2', 'loc2')");
-            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('Lebanese Politics', 'hello leb', 'author3', 'published3', 'loc3')");
-            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('Tech News', 'hello tech', 'author4', 'published4', 'loc4')");
+            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('Top News', 'Russian forces retreat from strategic Donetsk city a day after Moscow’s annexation of the region.\n Russian forces retreated from Lyman, a strategic city for its operations in the east, the Russian defense ministry said Saturday, just a day after Moscow’s annexation of the region that’s been declared illegal by the West.\n" +
+                    "\n" + "“In connection with the creation of a threat of encirclement, allied troops were withdrawn from the settlement of Krasny Liman to more advantageous lines,” the ministry said on Telegram, using the Russian name for the town of Lyman.', 'Kostan Nechyporenko', 'Published 10:46 AM EDT, Sat October 1, 2022', 'Kyiv, Ukraine')");
+            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('World News', 'South Korean President warns North over nuclear program.\n North Korea will face “a determined and overwhelming response” from South Korea and the United States if it attempts to use nuclear weapons, South Korea’s President Yoon Suk Yeol said Saturday.\n" +
+                    "\n" + "Speaking at the nation’s 74th Armed Forces Day ceremony, Yoon called North Korea’s recent law declaring itself a “nuclear weapons state” a threat to the survival and prosperity of South Korea and reiterated calls for Kim Jong Un to denuclearize.', 'Yoonjung Seo', 'Published 11:56 PM EDT, Fri September 30, 2022', 'Seoul, South Korea')");
+            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('Lebanese Politics', '63 blank votes, 36 votes for Mouawad, 11 for Edde in 1st round of presidential election.\n The Lebanese parliament on Thursday held a first presidential election round in which no candidate managed to garner 86 votes needed to win from the first round.\n" +
+                    "\n" + "As 63 MPs cast blank ballots, 36 voted for MP Michel Mouawad, 11 voted for entrepreneur and philanthropist Salim Edde, 10 voted for \"Lebanon\", one voted for Mahsa Amini who died in Iranian morality police custody, and one voted for \"the approach of (slain ex-PM) Rashid Karami\".', 'Naharnet Newsdesk', 'Published 1:07 PM EDT, Thu September 29, 2022', 'Beirut, Lebanon')");
+            db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('Tech News', 'Out-of-service satellites must be removed within 5 years, FCC says.\n Satellites that are no longer in service must get out of the sky far more quickly under a new rule adopted by US federal regulators Thursday — and it’s all in the name of combating the garbage in Earth’s orbit.\n" +
+                    "\n" + "Unused satellites in low-Earth orbit, which is the area already most congested with satellites, must be dragged out of orbit “as soon as practicable, and no more than five years following the end of their mission,” according to the new Federal Communications Commission rule.', 'Jackie Wattles', 'Published 1:29 PM EDT, Thu September 29, 2022', 'Washington')");
         }
         catch (Exception e)
     {

@@ -8,57 +8,61 @@
 
     <TextView
         android:id="@+id/locationView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="231dp"
+        android:layout_height="73dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Location"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.352" />
 
     <TextView
         android:id="@+id/descriptionView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="355dp"
+        android:layout_height="274dp"
+        android:fontFamily="sans-serif"
         android:text="Description"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintVertical_bias="0.756" />
 
     <TextView
         android:id="@+id/authorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="94dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Author"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <TextView
         android:id="@+id/publishedView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="226dp"
+        android:layout_height="91dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Published At"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26999998" />
+        app:layout_constraintVertical_bias="0.192" />
 </androidx.constraintlayout.widget.ConstraintLayout>

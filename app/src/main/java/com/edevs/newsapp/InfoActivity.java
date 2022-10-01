@@ -32,7 +32,7 @@ public class InfoActivity extends AppCompatActivity
         descriptionView = (TextView) findViewById(R.id.descriptionView);
         descriptionView.setText(description);
         authorView = (TextView) findViewById(R.id.authorView);
-        authorView.setText(author);
+        authorView.setText("Author: " + author);
         publishedView = (TextView) findViewById(R.id.publishedView);
         publishedView.setText(published_at);
         locationView = (TextView) findViewById(R.id.locationView);
