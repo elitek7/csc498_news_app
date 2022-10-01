@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class PostActivity extends AppCompatActivity
 {
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
