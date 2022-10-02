@@ -5,7 +5,7 @@
     android:id="@+id/done_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/e_devs_blank"
+    android:background="#202380"
     android:onClick="done">
 
     <EditText

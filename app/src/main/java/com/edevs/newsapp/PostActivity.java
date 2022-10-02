@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -35,7 +37,10 @@ public class PostActivity extends AppCompatActivity
         String location_input = location.getText().toString();
         EditText description = (EditText)findViewById(R.id.description);
         String description_input = description.getText().toString();
-        db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES ('', description_input, author_input, published_input, location_input)");
+        String name = "User News";
+
+
+        db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES (" + name +  ", " + description_input+ ", " + author_input+ ", " + published_input+ ", " + location_input+")");
         Toast.makeText(this, "Your news have been added", Toast.LENGTH_SHORT).show();
     }
 }
