@@ -8,8 +8,9 @@
 
     <TextView
         android:id="@+id/locationView"
-        android:layout_width="231dp"
-        android:layout_height="73dp"
+        android:layout_width="232dp"
+        android:layout_height="31dp"
+        android:background="#2DACACAC"
         android:fontFamily="sans-serif-medium"
         android:text="Location"
         android:textColor="#FFFFFF"
@@ -25,6 +26,7 @@
         android:id="@+id/descriptionView"
         android:layout_width="355dp"
         android:layout_height="274dp"
+        android:background="#2DACACAC"
         android:fontFamily="sans-serif"
         android:text="Description"
         android:textColor="#FFFFFF"
@@ -38,8 +40,9 @@
 
     <TextView
         android:id="@+id/authorView"
-        android:layout_width="248dp"
-        android:layout_height="94dp"
+        android:layout_width="246dp"
+        android:layout_height="74dp"
+        android:background="#2DACACAC"
         android:fontFamily="sans-serif-medium"
         android:text="Author"
         android:textColor="#FFFFFF"
@@ -53,8 +56,9 @@
 
     <TextView
         android:id="@+id/publishedView"
-        android:layout_width="226dp"
-        android:layout_height="91dp"
+        android:layout_width="225dp"
+        android:layout_height="96dp"
+        android:background="#2DACACAC"
         android:fontFamily="sans-serif-medium"
         android:text="Published At"
         android:textColor="#FFFFFF"

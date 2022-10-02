@@ -24,17 +24,26 @@ public class NameActivity extends AppCompatActivity
         getSupportActionBar().hide();
         shared = this.getSharedPreferences("com.lau.shared", Context.MODE_PRIVATE);
         setContentView(R.layout.activity_name);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     public void enter(View v)
     {
         EditText username = (EditText)findViewById(R.id.username);
         String username_input = username.getText().toString();
-        shared.edit().putString("Username", username_input);
-        Toast.makeText(this, "Latest news", Toast.LENGTH_SHORT).show();
-        //Initializing an intent to access the news page
-        Intent i = new Intent(getApplicationContext(), NewsActivity.class);
-        i.putExtra("username", username_input);
-        startActivity(i);
+        if(username_input.equals(""))
+        {
+                Toast.makeText(this, "Please enter your name.", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            shared.edit().putString("Username", username_input);
+            Toast.makeText(this, "Latest news", Toast.LENGTH_SHORT).show();
+            //Initializing an intent to access the news page
+            Intent i = new Intent(getApplicationContext(), NewsActivity.class);
+            i.putExtra("username", username_input);
+            startActivity(i);
+        }
     }
 }

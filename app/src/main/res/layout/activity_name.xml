@@ -5,8 +5,7 @@
     android:id="@+id/name"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/e_devs_blank"
-    android:onClick="enter">
+    android:background="@drawable/e_devs_blank">
 
     <Button
         android:id="@+id/enter"

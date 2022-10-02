@@ -40,7 +40,14 @@ public class PostActivity extends AppCompatActivity
         String name = "User News";
 
 
-        db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES (" + name +  ", " + description_input+ ", " + author_input+ ", " + published_input+ ", " + location_input+")");
+        db.execSQL("INSERT INTO new (name, description, author, published_at, location) VALUES (?, ?, ?, ?, ?)", new String[]
+                {
+                        name,
+                        description_input,
+                        author_input,
+                        published_input,
+                        location_input
+                });
         Toast.makeText(this, "Your news have been added", Toast.LENGTH_SHORT).show();
     }
 }
