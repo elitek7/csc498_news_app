@@ -1,7 +1,6 @@
 package com.edevs.newsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.*;
 import android.os.Bundle;
@@ -14,18 +13,18 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //Hiding the title and action bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
+        //Setting fullscreen
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Handler handler = new Handler();
         handler.postDelayed(new Runnable()
         {
             @Override
             public void run()
-            {
+            {   //Starting the next activity after the splash screen
                 Intent i = new Intent(MainActivity.this, NameActivity.class);
                 startActivity(i);
                 finish();

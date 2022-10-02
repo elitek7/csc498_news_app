@@ -30,16 +30,15 @@ public class NewsActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        // Lines 17 to 19 hide the title and action bar
+        //Hiding the title and action bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
+        //Setting fullscreen
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         try
-        {
+        {   //Initializing the database and filling it
             db = this.openOrCreateDatabase("newwwwdb", MODE_PRIVATE, null);
             db.execSQL("CREATE Table IF NOT EXISTS new (name VARCHAR, description TEXT, author VARCHAR, published_at VARCHAR, location VARCHAR)");
             // To be ran once
@@ -54,13 +53,13 @@ public class NewsActivity extends AppCompatActivity
         }
         catch (Exception e)
     {
-        e.printStackTrace(); //pinpoints the exact line in which the method raised the exception
-    }
+        e.printStackTrace(); //Pinpoints the exact line in which the method raised the exception
+    }   //Retrieving the buttons from the Relative Layout panels
         topButton = findViewById(R.id.panel_top);
         worldButton = findViewById(R.id.panel_world);
         lebaneseButton = findViewById(R.id.panel_lebanese);
         techButton = findViewById(R.id.panel_tech);
-
+        //Giving every button a listener
         topButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
